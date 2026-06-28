@@ -18,7 +18,7 @@ class SubscriberRedirect
         $user = auth()->user();
         $totalColumnsCreatedByUser = $user->columns()->count();
 
-        if ($user && !$user->subscribed() && $totalColumnsCreatedByUser < 3) {
+        if ($user && !$user->subscribed() && $totalColumnsCreatedByUser < 6) {
             return $next($request);
         } elseif ($user && $user->subscribed()) {
             return $next($request);

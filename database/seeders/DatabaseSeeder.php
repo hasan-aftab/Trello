@@ -21,6 +21,9 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('hasanaftab007@gmail.com')
         ]);
 
-        $this->call([ColumnCardSeeder::class]);
+        $this->call([
+            ProductSeeder::class,
+            ColumnCardSeeder::class
+        ]);
     }
 }
